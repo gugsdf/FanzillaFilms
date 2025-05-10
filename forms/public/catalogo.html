@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio de Filmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tela-menu">
+        <div class="tela-menu-2">
+            <div class="tela-menu-3">
+                <a href="index.html">Inicio</a>
+                <a href="filmes/CatalogoDeFilmes.html">Catalogo De Filmes</a>
+                <a href="#footer-content">Contato</a>
+                <a href="">Sobre Nos</a>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div id="barra-menu">
+            <span class="barra-text">&#9776;</span>
+        </div>
+        <div class="logo">
+            <img src="/img/FanzilaLogo.webp" width="170" height="140" alt="">
+        </div>
+        <input type="search" id="pesquisa" placeholder="Pesquisar Na Fanzilla">
+        <nav class="nav">
+            <a href="">
+                <p>Fan</p><span style="color: #14B2D6;">zilla</span>
+            </a>
+            <p style="font-size: 30px;color: #575757;padding: 2px;">|</p>
+            <a href="">Lista De Desejos</a>
+            <p class="usuario"></p>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <section style="position: relative;">
+                <div class="filmes-carousel">
+                    <button id="anterior" class="seta">&#10094;</button>
+
+                    <div class="filmes" id="filmeBanner">
+                        <!-- Será preenchido via JS -->
+                    </div>
+
+                    <button id="proximo" class="seta">&#10095;</button>
+                </div>
+                <div class="Em-Destaque">
+                    <h1 style="margin-left: 30px;">O Que Assistir Filmes e Series</h1>
+                    <section class="destaque">
+                        <div class="destaque-filmes">
+                            <div class="card" role="group">
+                                <div class="poster" role="group">
+                                    <div class="poster-img" style="width: 100%;">
+                                        <img alt="Harry Potter" class="poster-img-src" loading="lazy"
+                                            src="https://m.media-amazon.com/images/M/MV5BZmVjYjM2OGUtZmFmOS00YWYxLThhZWItMDJhZWEzNzU3OTU5XkEyXkFqcGc@._V1_QL75_UY281_CR3,0,190,281_.jpg"
+                                            style=" border-top-right-radius: 15px;" width="250">
+                                    </div>
+                                    <a class="overlay-link" href="/pt/title/tt1201607/?ref_=hm_tpks_i_1_pd_tp1_pbr_ic"
+                                        aria-label="Ver página do título Harry Potter">
+                                        <div class="overlay-bg"></div>
+                                    </a>
+                                </div>
+                                <div class="rating">
+                                    <span class="rating-star">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="yellow">
+                                            <path
+                                                d="M12 20.1l5.82 3.68c1.07.67 2.37-.32 2.09-1.58l-1.54-6.93 5.15-4.67c.94-.85.43-2.47-.8-2.57l-6.77-.6L13.29.89a1.38 1.38 0 0 0-2.58 0l-2.65 6.53-6.77.6c-1.23.1-1.74 1.64-.8 2.45l5.15 4.67-1.54 6.93c-.28 1.26 1.02 2.26 2.09 1.58L12 20.1z">
+                                            </path>
+                                        </svg>
+                                        <span class="rating-value" style="color: white;font-family: Roboto">8,1</span>
+                                    </span>
+                                </div>
+                                <a class="card-title" href="filmes/HarryPoter.html">
+                                    <span style="font-family: Roboto;padding: 8px;">Harry Potter 7</span>
+                                </a>
+                                <a class="Link-trailer" tabindex="0" aria-label="Trailer" href="filmes/HarryPoter.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class=""
+                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                        <path
+                                            d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z">
+                                        </path>
+                                    </svg>
+                                    <span class="Spam-video-Trailer">
+                                        <div class="trailers-button-text" data-testid="trailer-button">Trailer</div>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="card" role="group">
+                                <div class="poster" role="group">
+                                    <div class="poster-img" style="width: 100%;">
+                                        <img alt="Minecraft" class="poster-img-src" loading="lazy"
+                                            src="https://m.media-amazon.com/images/M/MV5BNGMxMDU1Y2ItMjA3Ny00YzgxLWJiY2EtZmU2NTY2NjIyMDkxXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg"
+                                            style=" border-top-right-radius: 15px;" width="250">
+                                    </div>
+                                    <a class="overlay-link" href="/pt/title/tt1201607/?ref_=hm_tpks_i_1_pd_tp1_pbr_ic"
+                                        aria-label="Ver página do título Harry Potter">
+                                        <div class="overlay-bg"></div>
+                                    </a>
+                                </div>
+                                <div class="rating">
+                                    <span class="rating-star">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="yellow">
+                                            <path
+                                                d="M12 20.1l5.82 3.68c1.07.67 2.37-.32 2.09-1.58l-1.54-6.93 5.15-4.67c.94-.85.43-2.47-.8-2.57l-6.77-.6L13.29.89a1.38 1.38 0 0 0-2.58 0l-2.65 6.53-6.77.6c-1.23.1-1.74 1.64-.8 2.45l5.15 4.67-1.54 6.93c-.28 1.26 1.02 2.26 2.09 1.58L12 20.1z">
+                                            </path>
+                                        </svg>
+                                        <span class="rating-value" style="color: white;font-family: Roboto">8,1</span>
+                                    </span>
+                                </div>
+                                <a class="card-title" href="filmes/Minecraft.html">
+                                    <span style="font-family: Roboto;padding: 8px;">Um Filme Minecraft</span>
+                                </a>
+                                <a class="Link-trailer" tabindex="0" aria-label="Trailer" href="filmes/Minecraft.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class=""
+                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                        <path
+                                            d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z">
+                                        </path>
+                                    </svg>
+                                    <span class="Spam-video-Trailer">
+                                        <div class="trailers-button-text" data-testid="trailer-button">Trailer</div>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="card" role="group">
+                                <div class="poster" role="group">
+                                    <div class="poster-img" style="width: 100%;">
+                                        <img alt="Lilo Stitch" class="poster-img-src" loading="lazy"
+                                            src="https://m.media-amazon.com/images/M/MV5BMzM0NTRkZWUtOTg5OC00YTBmLWI5NDEtZjQ5NjUwZTEyMTIxXkEyXkFqcGc@._V1_QL75_UY281_CR4,0,190,281_.jpg"
+                                            style=" border-top-right-radius: 15px;" width="250">
+                                    </div>
+                                    <a class="overlay-link" href="/pt/title/tt1201607/?ref_=hm_tpks_i_1_pd_tp1_pbr_ic"
+                                        aria-label="Ver página do título Harry Potter">
+                                        <div class="overlay-bg"></div>
+                                    </a>
+                                </div>
+                                <div class="rating">
+                                    <span class="rating-star">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="yellow">
+                                            <path
+                                                d="M12 20.1l5.82 3.68c1.07.67 2.37-.32 2.09-1.58l-1.54-6.93 5.15-4.67c.94-.85.43-2.47-.8-2.57l-6.77-.6L13.29.89a1.38 1.38 0 0 0-2.58 0l-2.65 6.53-6.77.6c-1.23.1-1.74 1.64-.8 2.45l5.15 4.67-1.54 6.93c-.28 1.26 1.02 2.26 2.09 1.58L12 20.1z">
+                                            </path>
+                                        </svg>
+                                        <span class="rating-value" style="color: white;font-family: Roboto">8,1</span>
+                                    </span>
+                                </div>
+                                <a class="card-title" href="/pt/title/tt1201607/?ref_=hm_tpks_t_1_pd_tp1_pbr_ic">
+                                    <span style="font-family: Roboto;padding: 8px;">Lilo Stitch</span>
+                                </a>
+                                <a class="Link-trailer" tabindex="0" aria-label="Trailer" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class=""
+                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                        <path
+                                            d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z">
+                                        </path>
+                                    </svg>
+                                    <span class="Spam-video-Trailer">
+                                        <div class="trailers-button-text" data-testid="trailer-button">Trailer</div>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="card" role="group">
+                                <div class="poster" role="group">
+                                    <div class="poster-img" style="width: 100%;">
+                                        <img alt="CAstelo Animado" class="poster-img-src" loading="lazy"
+                                            src="https://m.media-amazon.com/images/M/MV5BYjFmOTNkZDYtMzA2OC00MmVlLTgwM2EtMDcyNjUyOWVkMzY5XkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg"
+                                            style=" border-top-right-radius: 15px;" width="250">
+                                    </div>
+                                    <a class="overlay-link" href="/pt/title/tt1201607/?ref_=hm_tpks_i_1_pd_tp1_pbr_ic"
+                                        aria-label="Ver página do título Harry Potter">
+                                        <div class="overlay-bg"></div>
+                                    </a>
+                                </div>
+                                <div class="rating">
+                                    <span class="rating-star">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="yellow">
+                                            <path
+                                                d="M12 20.1l5.82 3.68c1.07.67 2.37-.32 2.09-1.58l-1.54-6.93 5.15-4.67c.94-.85.43-2.47-.8-2.57l-6.77-.6L13.29.89a1.38 1.38 0 0 0-2.58 0l-2.65 6.53-6.77.6c-1.23.1-1.74 1.64-.8 2.45l5.15 4.67-1.54 6.93c-.28 1.26 1.02 2.26 2.09 1.58L12 20.1z">
+                                            </path>
+                                        </svg>
+                                        <span class="rating-value" style="color: white;font-family: Roboto">8,1</span>
+                                    </span>
+                                </div>
+                                <a class="card-title" href="/pt/title/tt1201607/?ref_=hm_tpks_t_1_pd_tp1_pbr_ic">
+                                    <span style="font-family: Roboto;padding: 8px;">O Castelo Animado</span>
+                                </a>
+                                <a class="Link-trailer" tabindex="0" aria-label="Trailer" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class=""
+                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                        <path
+                                            d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z">
+                                        </path>
+                                    </svg>
+                                    <span class="Spam-video-Trailer">
+                                        <div class="trailers-button-text" data-testid="trailer-button">Trailer</div>
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="card" role="group">
+                                <div class="poster" role="group">
+                                    <div class="poster-img" style="width: 100%;">
+                                        <img alt="Rocky" class="poster-img-src" loading="lazy"
+                                            src="https://m.media-amazon.com/images/M/MV5BNzdhZDNjN2ItMDdjMS00Yzk5LWFjZmYtMjM4MjM1Zjg2MzFlXkEyXkFqcGc@._V1_.jpg"
+                                            style=" border-top-right-radius: 15px;" width="250">
+                                    </div>
+                                    <a class="overlay-link" href="/pt/title/tt1201607/?ref_=hm_tpks_i_1_pd_tp1_pbr_ic"
+                                        aria-label="Ver página do título Harry Potter">
+                                        <div class="overlay-bg"></div>
+                                    </a>
+                                </div>
+                                <div class="rating">
+                                    <span class="rating-star">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="yellow">
+                                            <path
+                                                d="M12 20.1l5.82 3.68c1.07.67 2.37-.32 2.09-1.58l-1.54-6.93 5.15-4.67c.94-.85.43-2.47-.8-2.57l-6.77-.6L13.29.89a1.38 1.38 0 0 0-2.58 0l-2.65 6.53-6.77.6c-1.23.1-1.74 1.64-.8 2.45l5.15 4.67-1.54 6.93c-.28 1.26 1.02 2.26 2.09 1.58L12 20.1z">
+                                            </path>
+                                        </svg>
+                                        <span class="rating-value" style="color: white;font-family: Roboto">8,1</span>
+                                    </span>
+                                </div>
+                                <a class="card-title" href="/pt/title/tt1201607/?ref_=hm_tpks_t_1_pd_tp1_pbr_ic">
+                                    <span style="font-family: Roboto;padding: 8px;">Rocky</span>
+                                </a>
+                                <a class="Link-trailer" tabindex="0" aria-label="Trailer" href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class=""
+                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                        <path
+                                            d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18a1 1 0 0 0 0-1.69L9.54 5.98A.998.998 0 0 0 8 6.82z">
+                                        </path>
+                                    </svg>
+                                    <span class="Spam-video-Trailer">
+                                        <div class="trailers-button-text" data-testid="trailer-button">Trailer</div>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section class="section-filmes">
+                <h1 style="background-color: #000000;font-size: 28px;background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%,    #9f7928 30%, #8A6E2F 40%, transparent 80%),
+                    radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                color: transparent;">Filmes A Seguir:</h1>
+                <div class="catalogo-filmes">
+                    <ul>
+                        <li class="lista-div">
+                            <div class="filmes-div">
+                                <a href="filmes/MonstrosSeA.html" class="link-filme" >
+                                    <img style="border-radius: 20px;" width="120" height="180"
+                                        src="https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_.jpg"
+                                        alt="">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="play-filme" viewBox="0 0 24 24"
+                                            fill="currentColor" role="presentation">
+                                            <path
+                                                d="M10.803 15.932l4.688-3.513a.498.498 0 0 0 0-.803l-4.688-3.514a.502.502 0 0 0-.803.402v7.026c0 .412.472.653.803.402z">
+                                            </path>
+                                            <path
+                                                d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z">
+                                            </path>
+                                            <p class="tempo">1:24</p>
+
+                                            <div class="Texto-Breve">
+                                                <p>Monstros S.A</p>
+                                                <p>Assista Ao Trailer</p>
+                                                <div class="likes">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        class="ipc-icon ipc-icon--thumb-up ipc-reaction-summary__likes-icon"
+                                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                                        <path
+                                                            d="M13.12 2.06c.58-.59 1.52-.59 2.11-.01.36.36.51.87.41 1.37L14.69 8h5.65c2.15 0 3.6 2.2 2.76 4.18l-3.26 7.61C19.52 20.52 18.8 21 18 21H9c-1.1 0-2-.9-2-2V9.01c0-.53.21-1.04.58-1.41l5.54-5.54zM9.293 8.707A1 1 0 0 0 9 9.414V18a1 1 0 0 0 1 1h7.332a1 1 0 0 0 .924-.617c1.663-4.014 2.527-6.142 2.594-6.383.07-.253.12-.587.15-1v-.002A1 1 0 0 0 20 10h-8l1.34-5.34-4.047 4.047zM3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="ipc-reaction-summary__label"
+                                                        aria-hidden="true">2701</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="lista-div">
+                            <div class="filmes-div">
+                                <a href="filmes/TreinarDragao.html" class="link-filme">
+                                    <img style="border-radius: 20px;" width="120" height="180"
+                                        src="https://m.media-amazon.com/images/M/MV5BMWE0YjQyYWEtYmY1NS00YTk4LTgwYzgtZTY3N2YxYmU0YjkzXkEyXkFqcGc@._V1_.jpg"
+                                        alt="">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="play-filme" viewBox="0 0 24 24"
+                                            fill="currentColor" role="presentation">
+                                            <path
+                                                d="M10.803 15.932l4.688-3.513a.498.498 0 0 0 0-.803l-4.688-3.514a.502.502 0 0 0-.803.402v7.026c0 .412.472.653.803.402z">
+                                            </path>
+                                            <path
+                                                d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z">
+                                            </path>
+                                            <p class="tempo">2:24</p>
+
+                                            <div class="Texto-Breve">
+                                                <p>Como Treinar Seu Dragão</p>
+                                                <p>Assista Ao Trailer</p>
+                                                <div class="likes">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        class="ipc-icon ipc-icon--thumb-up ipc-reaction-summary__likes-icon"
+                                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                                        <path
+                                                            d="M13.12 2.06c.58-.59 1.52-.59 2.11-.01.36.36.51.87.41 1.37L14.69 8h5.65c2.15 0 3.6 2.2 2.76 4.18l-3.26 7.61C19.52 20.52 18.8 21 18 21H9c-1.1 0-2-.9-2-2V9.01c0-.53.21-1.04.58-1.41l5.54-5.54zM9.293 8.707A1 1 0 0 0 9 9.414V18a1 1 0 0 0 1 1h7.332a1 1 0 0 0 .924-.617c1.663-4.014 2.527-6.142 2.594-6.383.07-.253.12-.587.15-1v-.002A1 1 0 0 0 20 10h-8l1.34-5.34-4.047 4.047zM3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="ipc-reaction-summary__label"
+                                                        aria-hidden="true">2122</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="lista-div">
+                            <div class="filmes-div">
+                                <a href="filmes/ToyStory.html" class="link-filme" >
+                                    <img style="border-radius: 20px;" width="120" height="180"
+                                        src="https://m.media-amazon.com/images/M/MV5BYjM1NTI5NDktM2I0Zi00MDgxLTg4NzAtYzkwYTUxNjk3MTQyXkEyXkFqcGc@._V1_.jpg"
+                                        alt="">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="play-filme" viewBox="0 0 24 24"
+                                            fill="currentColor" role="presentation">
+                                            <path
+                                                d="M10.803 15.932l4.688-3.513a.498.498 0 0 0 0-.803l-4.688-3.514a.502.502 0 0 0-.803.402v7.026c0 .412.472.653.803.402z">
+                                            </path>
+                                            <path
+                                                d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z">
+                                            </path>
+                                            <p class="tempo">2:42</p>
+
+                                            <div class="Texto-Breve">
+                                                <p>Toy Story 1</p>
+                                                <p>Assista Ao Trailer</p>
+                                                <div class="likes">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        class="ipc-icon ipc-icon--thumb-up ipc-reaction-summary__likes-icon"
+                                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                                        <path
+                                                            d="M13.12 2.06c.58-.59 1.52-.59 2.11-.01.36.36.51.87.41 1.37L14.69 8h5.65c2.15 0 3.6 2.2 2.76 4.18l-3.26 7.61C19.52 20.52 18.8 21 18 21H9c-1.1 0-2-.9-2-2V9.01c0-.53.21-1.04.58-1.41l5.54-5.54zM9.293 8.707A1 1 0 0 0 9 9.414V18a1 1 0 0 0 1 1h7.332a1 1 0 0 0 .924-.617c1.663-4.014 2.527-6.142 2.594-6.383.07-.253.12-.587.15-1v-.002A1 1 0 0 0 20 10h-8l1.34-5.34-4.047 4.047zM3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="ipc-reaction-summary__label" aria-hidden="true">4244
+                                                    </span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="lista-div">
+                            <div class="filmes-div">
+                                <a href="filmes/Procurandonemo.html" class="link-filme" >
+                                    <img style="border-radius: 20px;" width="120" height="180"
+                                        src="https://m.media-amazon.com/images/M/MV5BYzYzYjYwNzUtNDI4Yi00NWUzLTg0ZDctZWZlZTY0MTAyNWVlXkEyXkFqcGc@._V1_.jpg"
+                                        alt="">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="play-filme" viewBox="0 0 24 24"
+                                            fill="currentColor" role="presentation">
+                                            <path
+                                                d="M10.803 15.932l4.688-3.513a.498.498 0 0 0 0-.803l-4.688-3.514a.502.502 0 0 0-.803.402v7.026c0 .412.472.653.803.402z">
+                                            </path>
+                                            <path
+                                                d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z">
+                                            </path>
+                                            <p class="tempo">1:03</p>
+
+                                            <div class="Texto-Breve">
+                                                <p>Procurando Nemo</p>
+                                                <p>Assista Ao Trailer</p>
+                                                <div class="likes">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        class="ipc-icon ipc-icon--thumb-up ipc-reaction-summary__likes-icon"
+                                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                                        <path
+                                                            d="M13.12 2.06c.58-.59 1.52-.59 2.11-.01.36.36.51.87.41 1.37L14.69 8h5.65c2.15 0 3.6 2.2 2.76 4.18l-3.26 7.61C19.52 20.52 18.8 21 18 21H9c-1.1 0-2-.9-2-2V9.01c0-.53.21-1.04.58-1.41l5.54-5.54zM9.293 8.707A1 1 0 0 0 9 9.414V18a1 1 0 0 0 1 1h7.332a1 1 0 0 0 .924-.617c1.663-4.014 2.527-6.142 2.594-6.383.07-.253.12-.587.15-1v-.002A1 1 0 0 0 20 10h-8l1.34-5.34-4.047 4.047zM3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="ipc-reaction-summary__label"
+                                                        aria-hidden="true">1766</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="lista-div">
+                            <div class="filmes-div">
+                                <a href="filmes/YourName.html" class="link-filme">
+                                    <img style="border-radius: 20px;" width="120" height="180"
+                                        src="https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg"
+                                        alt="">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="play-filme" viewBox="0 0 24 24"
+                                            fill="currentColor" role="presentation">
+                                            <path
+                                                d="M10.803 15.932l4.688-3.513a.498.498 0 0 0 0-.803l-4.688-3.514a.502.502 0 0 0-.803.402v7.026c0 .412.472.653.803.402z">
+                                            </path>
+                                            <path
+                                                d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z">
+                                            </path>
+                                            <p class="tempo">1:03</p>
+
+                                            <div class="Texto-Breve">
+                                                <p>Your Name</p>
+                                                <p>Assista Ao Trailer</p>
+                                                <div class="likes">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        class="ipc-icon ipc-icon--thumb-up ipc-reaction-summary__likes-icon"
+                                                        viewBox="0 0 24 24" fill="currentColor" role="presentation">
+                                                        <path
+                                                            d="M13.12 2.06c.58-.59 1.52-.59 2.11-.01.36.36.51.87.41 1.37L14.69 8h5.65c2.15 0 3.6 2.2 2.76 4.18l-3.26 7.61C19.52 20.52 18.8 21 18 21H9c-1.1 0-2-.9-2-2V9.01c0-.53.21-1.04.58-1.41l5.54-5.54zM9.293 8.707A1 1 0 0 0 9 9.414V18a1 1 0 0 0 1 1h7.332a1 1 0 0 0 .924-.617c1.663-4.014 2.527-6.142 2.594-6.383.07-.253.12-.587.15-1v-.002A1 1 0 0 0 20 10h-8l1.34-5.34-4.047 4.047zM3 21c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2s-2 .9-2 2v8c0 1.1.9 2 2 2z">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="ipc-reaction-summary__label"
+                                                        aria-hidden="true">766</span>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <section>
+            <div class="noticias">
+                <h3 class="titulo-noticias">Principais notícias</h3>
+
+                <div class="carrossel-noticias">
+                    <!-- Notícia 1 -->
+                    <div class="noticia">
+                        <a class="item-noticia" href="#">
+                            <img src="https://m.media-amazon.com/images/M/MV5BNzA3ZTg3YzYtZjIzZS00NDY2LWFmZDQtMTkzMTUyY2ZmZTNmXkEyXkFqcGc@._V1_QL75_UY133_CR22,0,90,133_.jpg"
+                                alt="The Studio">
+                        </a>
+
+                        <div>
+                            <h1 style="margin-top: 20px;">‘The Studio’ terá continuação</h1>
+                            <p>A série de terror da Netflix, "The Studio", foi renovada para uma segunda temporada após
+                                o sucesso
+                                da primeira. Os fãs estão ansiosos para ver o que acontecerá a seguir.</p>
+                        </div>
+
+                    </div>
+                    <div class="noticia">
+                        <a class="item-noticia" href="#">
+                            <img src="https://m.media-amazon.com/images/M/MV5BYjVhZDZjNzctZjIxMS00MDE3LWEwZWQtMzFiNGMzMWZhYmZmXkEyXkFqcGc@._V1_QL75_UY133_CR55,0,90,133_.jpg"
+                                alt="Good American Family">
+                        </a>
+                        <div>
+                            <h1 style="margin-top: 20px;">Final de ‘Good American Family’ é sucesso</h1>
+                            <p>A série "Good American Family" chegou ao fim com um emocionante episódio final que deixou
+                                os
+                                fãs
+                                emocionados. A trama envolvente e os personagens cativantes conquistaram o público.</p>
+                        </div>
+                    </div>
+
+                    <!-- Notícia 3 -->
+                    <div class="noticia">
+                        <a class="item-noticia" href="#">
+                            <img src="https://m.media-amazon.com/images/M/MV5BMmZjMWYyYjUtZjFmNS00NTAwLTljMzQtMTEyMTlhYWJkY2QwXkEyXkFqcGc@._V1_QL75_UY133_CR73,0,90,133_.jpg"
+                                alt="Thunderbolts Spoiler">
+                        </a>
+                        <div>
+                            <h1 style="margin-top: 20px;">Marvel explica asterisco polêmico</h1>
+                            <p>O filme "Thunderbolts" da Marvel está gerando muita expectativa entre os fãs, e um novo
+                                spoiler
+                                deixou todos ainda mais animados. A trama promete muitas reviravoltas e ação intensa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Notícia 4 -->
+                    <div class="noticia">
+                        <a class="item-noticia" href="#">
+                            <img src="https://m.media-amazon.com/images/M/MV5BZWE4YTU4NjAtNzMzNS00MDVjLTk0MTItZjc2MjM2MzM0ZDk2XkEyXkFqcGc@._V1_QL75_UY133_CR22,0,90,133_.jpg"
+                                alt="Yellowstone">
+                        </a>
+                        <div>
+                            <h1 style="margin-top: 20px;">Harrison Ford pode continuar em ‘Yellowstone'</h1>
+                            <p>Após rumores de que Harrison Ford deixaria "Yellowstone", o ator confirmou que está
+                                aberto a
+                                continuar na série. Os fãs estão animados com a possibilidade de vê-lo mais uma vez.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div id="footer-content">
+            <div class="footer-social-media">
+                <h1>Siga-Nos Nas Redes-Sociais</h1>
+                <div class="link-footer">
+                    <a href="#"><img style="border-radius: 10px;" width="50px" height="50px"
+                            src="img/LogosRedesSociais/LogoFacebook.png" alt="Facebook"></a>
+                    <a href="#"><img width="50px" height="50px" src="img/LogosRedesSociais/LogoInstagram.webp"
+                            alt="Instagram"></a>
+                    <a href="#"><img width="50px" height="50px" src="img/LogosRedesSociais/LogoWhatsApp.webp"
+                            alt="WhatsApp"></a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <h1 style="margin-bottom: 30px;">Baixe o App</h1>
+                <div class="link-footer">
+                    <img style="position: absolute;bottom: 340px;" width="80px" height="90px" src="img/FanzilaLogo.webp"
+                        alt="Google Play">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="PoliticaeTermos">
+            <a href="">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+        <p class="final">&copy; 2025 Fanzilla. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const nomeUsuario = localStorage.getItem('usuario');
+        const el = document.querySelector('.usuario');
+        if (nomeUsuario && el) {
+            el.textContent = `Olá, ${nomeUsuario}!`;
+        }
+        const filmes = [
+            {
+                titulo: "Dexter",
+                descricao: "Dexter Criado por James Manos Jr.",
+                nota: "8.7",
+                cartaz: "img/imgCartaz/CartazDexter.jpeg",
+                logo: "img/imgLogoFilme/FotoLogoPrinc.webp",
+                link: "filmes/Dexter.html"
+            },
+            {
+                titulo: "Harry Potter 7",
+                descricao: "O final épico da saga do bruxo.",
+                nota: "8.1",
+                cartaz: "https://m.media-amazon.com/images/M/MV5BZmVjYjM2OGUtZmFmOS00YWYxLThhZWItMDJhZWEzNzU3OTU5XkEyXkFqcGc@._V1_QL75_UY281_CR3,0,190,281_.jpg",
+                logo: "https://m.media-amazon.com/images/M/MV5BZmVjYjM2OGUtZmFmOS00YWYxLThhZWItMDJhZWEzNzU3OTU5XkEyXkFqcGc@._V1_QL75_UY281_CR3,0,190,281_.jpg",
+                link: "/filmes/HarryPoter.html"
+            },
+            {
+                titulo: "Your Name",
+                descricao: "Uma conexão além do tempo.",
+                nota: "8.4",
+                cartaz: "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg",
+                logo: "https://m.media-amazon.com/images/M/MV5BMjI1ODZkYTgtYTY3Yy00ZTJkLWFkOTgtZDUyYWM4MzQwNjk0XkEyXkFqcGc@._V1_QL75_UX140_CR0,0,140,207_.jpg",
+                link: "/filmes/YourName.html"
+            }
+        ];
+
+        let atual = 0;
+        const container = document.getElementById('filmeBanner');
+
+        function atualizarBanner() {
+            const f = filmes[atual];
+            container.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" class="player-icon" viewBox="0 0 24 24" fill="currentColor" role="presentation">
+        <path d="M10.803 15.932l4.688-3.513a.498.498 0 0 0 0-.803l-4.688-3.514a.502.502 0 0 0-.803.402v7.026c0 .412.472.653.803.402z"></path>
+        <path d="M12 24C5.373 24 0 18.627 0 12S5.373 0 12 0s12 5.373 12 12-5.373 12-12 12zm0-1c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11z"></path>
+      </svg>
+      <img class="Cartaz" src="${f.cartaz}" alt="">
+      <div class="overlay"></div>
+      <div class="Class-text">
+        <div class="img-text">
+          <img style="border-radius: 20px;" width="160" height="200" src="${f.logo}" alt="">
+        </div>
+        <div class="text">
+          <h1>${f.titulo}</h1>
+          <p>${f.descricao}</p>
+          <p>Nota no IMDb: ${f.nota}</p>
+        </div>
+      </div>
+      <a href="${f.link}" class="link-cartaz" target="_blank"></a>
+    `;
+        }
+
+        document.getElementById('anterior').addEventListener('click', () => {
+            atual = (atual - 1 + filmes.length) % filmes.length;
+            atualizarBanner();
+        });
+        document.getElementById('proximo').addEventListener('click', () => {
+            atual = (atual + 1) % filmes.length;
+            atualizarBanner();
+        });
+
+        atualizarBanner();
+    </script>
+</body>
+<script src="src/menu.js"></script>
+
+</html>
