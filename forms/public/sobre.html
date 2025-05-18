@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio de Filmes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/FanzilaLogo.webp" type="image/x-icon">
+    <link rel="stylesheet" href="estilosobre.css">
+</head>
+
+<body>
+    <div class="tela-menu">
+        <div class="tela-menu-2">
+            <div class="tela-menu-3">
+                <a href="index.html">Inicio</a>
+                <a href="filmes/CatalogoDeFilmes.html">Catalogo De Filmes</a>
+                <a href="#footer-content">Contato</a>
+                <a href="/forms/public/sobre.html">Sobre Nos</a>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div id="barra-menu">
+            <span class="barra-text">&#9776;</span>
+        </div>
+        <div class="logo">
+            <img src="img/FanzilaLogo.webp" width="170" height="140" alt="">
+        </div>
+        <input type="search" id="pesquisa" placeholder="Pesquisar Na Fanzilla">
+        <nav class="nav">
+            <a href="">
+                <p>Fan</p><span style="color: #14B2D6;">zilla</span>
+            </a>
+            <p style="font-size: 30px;color: #575757;padding: 2px;">|</p>
+            <a href="">Lista De Desejos</a>
+            <p class="usuario"></p>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="sobre">
+            <img src="img/FanzilaLogo.webp" alt="">
+            <div class="sobre-texto">
+                <h1>Sobre Nós</h1>
+                <p>Fanzilla é uma plataforma inovadora dedicada a conectar amantes de filmes e séries. Nossa missão é
+                    proporcionar uma experiência única, onde os usuários podem explorar, descobrir e compartilhar suas
+                    paixões cinematográficas.</p>
+                <p>Com um catálogo diversificado e atualizado, oferecemos uma ampla gama de opções para todos os gostos. Desde
+                    clássicos atemporais até os lançamentos mais recentes, garantimos que você sempre encontre algo
+                    emocionante para assistir.</p>
+                <p>Nossa comunidade é o coração da Fanzilla. Incentivamos a interação entre os usuários, permitindo que
+                    compartilhem opiniões, críticas e recomendações. Junte-se a nós e faça parte dessa jornada cinematográfica
+                    incrível!</p>
+            </div>
+        </div>
+        <div class="criador">
+            <img src="foto.png" alt="">
+            <div class="sobre-texto">
+                <h1>Sobre o Criador</h1>
+                <p>O criador da Fanzilla é um apaixonado por c tecnologia. Desde jovem, sempre sonhou em Ser Rico!! 
+                    Ser Dono De Um Site...</p>
+                <p>Com uma formação sólida em desenvolvimento de software e design de experiência do usuário, ele dedicou
+                    anos de trabalho árduo para transformar essa visão em realidade.Para Estudar Na Germinare esse é o resultado desse sonho,Fanzilla
+                    projetada para ser intuitiva, envolvente e acessível a todos Com Milhares De Conteudos Até Adultos....</p>
+                <p>Além de ser um entusiasta do cinema, o criador também valoriza a comunidade. Ele acredita que a troca de
+                    experiências e opiniões enriquece a experiência cinematográfica e torna a Fanzilla um lugar especial para
+                    todos os amantes da sétima arte. e Sim Esse Texto eh em Terceira Pessoa!</p>
+            </div>
+        </div>
+    </div>    
+    <footer class="footer">
+        <div id="footer-content">
+            <div class="footer-social-media">
+                <h1>Siga-Nos Nas Redes-Sociais</h1>
+                <div class="link-footer">
+                    <a href="#"><img style="border-radius: 10px;" width="50px" height="50px"
+                            src="img/LogosRedesSociais/LogoFacebook.png" alt="Facebook"></a>
+                    <a href="#"><img width="50px" height="50px" src="img/LogosRedesSociais/LogoInstagram.webp"
+                            alt="Instagram"></a>
+                    <a href="#"><img width="50px" height="50px" src="img/LogosRedesSociais/LogoWhatsApp.webp"
+                            alt="WhatsApp"></a>
+                </div>
+            </div>
+            <div class="footer-social-media">
+                <h1 style="margin-bottom: 30px;">Baixe o App</h1>
+                <div class="link-footer">
+                    <img style="position: absolute;bottom: 340px;" width="80px" height="90px" src="img/FanzilaLogo.webp"
+                        alt="Google Play">
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="PoliticaeTermos">
+            <a href="">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+        </div>
+        <p class="final">&copy; 2025 Fanzilla. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        const nomeUsuario = localStorage.getItem('usuario');
+        const el = document.querySelector('.usuario');
+        if (nomeUsuario && el) {
+            el.textContent = `Olá, ${nomeUsuario}!`;
+        }
+    </script>
+</body>
+<script src="src/menu.js"></script>
+
+</html>
