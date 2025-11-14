@@ -61,39 +61,6 @@ app.post('/login', async (req, res) => {
         res.status(500).send('Erro interno ao verificar login.');
     }
 });
-
-const inputPesquisa = document.getElementById('pesquisa');
-const resultadoDiv = document.createElement('div');
-resultadoDiv.id = 'resultado';
-resultadoDiv.style.marginTop = '10px';
-document.body.appendChild(resultadoDiv);
-
-inputPesquisa.addEventListener('input', async () => {
-    const termo = inputPesquisa.value.trim();
-    resultadoDiv.innerHTML = '';
-
-    if (termo.length === 0) return;
-
-    const resposta = await fetch(`/?q=${encodeURIComponent(termo)}`);
-    const filmes = await resposta.json();
-
-    if (filmes.length === 0) {
-        resultadoDiv.innerHTML = '<p>Nenhum filme encontrado.</p>';
-        return;
-    }
-
-    filmes.forEach(filme => {
-        const item = document.createElement('div');
-        item.style.border = '1px solid #333';
-        item.style.padding = '8px';
-        item.style.marginBottom = '5px';
-        item.style.borderRadius = '8px';
-        item.innerHTML = `<strong>${filme.nome}</strong> — Nota: ${filme.nota}`;
-        resultadoDiv.appendChild(item);
-    });
-});
-
-
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
