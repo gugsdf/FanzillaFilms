@@ -14,10 +14,12 @@
     <div class="tela-menu">
         <div class="tela-menu-2">
             <div class="tela-menu-3">
-                <a href="index.html">Inicio</a>
-                <a href="filmes/CatalogoDeFilmes.html">Catalogo De Filmes</a>
+                <a href="/forms/public/catalogo.html">Inicio</a>
+                <a href="/forms/public/filmes/CatalogoDeFilmes.html">Catalogo De Filmes</a>
                 <a href="#footer-content">Contato</a>
                 <a href="/forms/public/filmes/sobre.html">Sobre Nos</a>
+                <a href="https://fanzilla-site.onrender.com">Sair</a>
+
             </div>
         </div>
     </div>
@@ -26,7 +28,7 @@
             <span class="barra-text">&#9776;</span>
         </div>
         <div class="logo">
-            <img src="/img/FanzilaLogo.webp" width="170" height="140" alt="">
+            <img src="img/FanzilaLogo.webp" width="170" height="140" alt="">
         </div>
         <input type="search" id="pesquisa" placeholder="Pesquisar Na Fanzilla">
         <nav class="nav">
@@ -255,7 +257,7 @@
                     <ul>
                         <li class="lista-div">
                             <div class="filmes-div">
-                                <a href="filmes/MonstrosSeA.html" class="link-filme" >
+                                <a href="filmes/MonstrosSeA.html" class="link-filme">
                                     <img style="border-radius: 20px;" width="120" height="180"
                                         src="https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_.jpg"
                                         alt="">
@@ -327,7 +329,7 @@
                         </li>
                         <li class="lista-div">
                             <div class="filmes-div">
-                                <a href="filmes/ToyStory.html" class="link-filme" >
+                                <a href="filmes/ToyStory.html" class="link-filme">
                                     <img style="border-radius: 20px;" width="120" height="180"
                                         src="https://m.media-amazon.com/images/M/MV5BYjM1NTI5NDktM2I0Zi00MDgxLTg4NzAtYzkwYTUxNjk3MTQyXkEyXkFqcGc@._V1_.jpg"
                                         alt="">
@@ -363,7 +365,7 @@
                         </li>
                         <li class="lista-div">
                             <div class="filmes-div">
-                                <a href="filmes/Procurandonemo.html" class="link-filme" >
+                                <a href="filmes/Procurandonemo.html" class="link-filme">
                                     <img style="border-radius: 20px;" width="120" height="180"
                                         src="https://m.media-amazon.com/images/M/MV5BYzYzYjYwNzUtNDI4Yi00NWUzLTg0ZDctZWZlZTY0MTAyNWVlXkEyXkFqcGc@._V1_.jpg"
                                         alt="">
@@ -600,6 +602,37 @@
         });
 
         atualizarBanner();
+        const inputPesquisa = document.getElementById('pesquisa');
+        const resultadoDiv = document.createElement('div');
+        resultadoDiv.id = 'resultado';
+        resultadoDiv.style.marginTop = '10px';
+        document.body.appendChild(resultadoDiv);
+
+        inputPesquisa.addEventListener('input', async () => {
+            const termo = inputPesquisa.value.trim();
+            resultadoDiv.innerHTML = '';
+
+            if (termo.length === 0) return;
+
+            const resposta = await fetch(`/filmes?q=${encodeURIComponent(termo)}`);
+            const filmes = await resposta.json();
+
+            if (filmes.length === 0) {
+                resultadoDiv.innerHTML = '<p>Nenhum filme encontrado.</p>';
+                return;
+            }
+
+            filmes.forEach(filme => {
+                const item = document.createElement('div');
+                item.style.border = '1px solid #333';
+                item.style.padding = '8px';
+                item.style.marginBottom = '5px';
+                item.style.borderRadius = '8px';
+                item.innerHTML = `<strong>${filme.nome}</strong> — Nota: ${filme.nota}`;
+                resultadoDiv.appendChild(item);
+            });
+        });
+
     </script>
 </body>
 <script src="src/menu.js"></script>

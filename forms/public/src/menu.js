@@ -11,7 +11,6 @@ menu.addEventListener("click", (event) => {
     toggleMenu();
 });
 
-// Esconder se clicar fora do menu
 document.addEventListener("click", (event) => {
     const isClickInsideMenu = menu.contains(event.target) || menuItems.contains(event.target);
     if (!isClickInsideMenu) {

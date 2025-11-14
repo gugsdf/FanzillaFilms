@@ -4,11 +4,9 @@ const path = require('path');
 
 const app = express();
 
-// Define corretamente o caminho para a pasta "public" dentro de "form"
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Conexão com o banco (mantém como está)
 const pool = new Pool({
     host: 'pg-1c771a7e-germinare-bdeb.f.aivencloud.com',
     user: 'avnadmin',
@@ -20,7 +18,7 @@ const pool = new Pool({
 
 // Rota GET da página inicial
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'public', 'login.html'));
+    res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
 // Rota POST para cadastro
@@ -63,6 +61,38 @@ app.post('/login', async (req, res) => {
         res.status(500).send('Erro interno ao verificar login.');
     }
 });
+
+const inputPesquisa = document.getElementById('pesquisa');
+const resultadoDiv = document.createElement('div');
+resultadoDiv.id = 'resultado';
+resultadoDiv.style.marginTop = '10px';
+document.body.appendChild(resultadoDiv);
+
+inputPesquisa.addEventListener('input', async () => {
+    const termo = inputPesquisa.value.trim();
+    resultadoDiv.innerHTML = '';
+
+    if (termo.length === 0) return;
+
+    const resposta = await fetch(`/?q=${encodeURIComponent(termo)}`);
+    const filmes = await resposta.json();
+
+    if (filmes.length === 0) {
+        resultadoDiv.innerHTML = '<p>Nenhum filme encontrado.</p>';
+        return;
+    }
+
+    filmes.forEach(filme => {
+        const item = document.createElement('div');
+        item.style.border = '1px solid #333';
+        item.style.padding = '8px';
+        item.style.marginBottom = '5px';
+        item.style.borderRadius = '8px';
+        item.innerHTML = `<strong>${filme.nome}</strong> — Nota: ${filme.nota}`;
+        resultadoDiv.appendChild(item);
+    });
+});
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {

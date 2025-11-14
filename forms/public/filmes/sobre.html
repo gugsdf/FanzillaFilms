@@ -4,29 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardápio de Filmes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="img/FanzilaLogo.webp" type="image/x-icon">
-    <link rel="stylesheet" href="estilosobre.css">
+    <title>Meu Portfólio Pessoal (Fanzilla Theme)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Raleway:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/forms/public/filmes/estiloFIlmes/estilosobre.css">
 </head>
 
 <body>
     <div class="tela-menu">
         <div class="tela-menu-2">
             <div class="tela-menu-3">
-                <a href="index.html">Inicio</a>
-                <a href="filmes/CatalogoDeFilmes.html">Catalogo De Filmes</a>
+                <a href="/forms/public/catalogo.html">Inicio</a>
+                <a href="/forms/public/filmes/CatalogoDeFilmes.html">Catalogo De Filmes</a>
                 <a href="#footer-content">Contato</a>
-                <a href="sobre.html">Sobre Nos</a>
+                <a href="/forms/public/filmes/sobre.html">Sobre Nos</a>
+                <a href="https://fanzilla-site.onrender.com">Sair</a>
+
             </div>
         </div>
     </div>
+
     <header class="header">
         <div id="barra-menu">
             <span class="barra-text">&#9776;</span>
         </div>
         <div class="logo">
-            <img src="img/FanzilaLogo.webp" width="170" height="140" alt="">
+            <img src="/forms/public/img/FanzilaLogo.webp" width="170" height="140" alt="Logo Fanzilla">
         </div>
         <input type="search" id="pesquisa" placeholder="Pesquisar Na Fanzilla">
         <nav class="nav">
@@ -35,61 +41,124 @@
             </a>
             <p style="font-size: 30px;color: #575757;padding: 2px;">|</p>
             <a href="">Lista De Desejos</a>
-            <p class="usuario"></p>
+            <p class="usuario">Login</p>
         </nav>
     </header>
-    <div class="container">
-        <div class="sobre">
-            <img src="img/FanzilaLogo.webp" alt="">
-            <div class="sobre-texto">
-                <h1>Sobre Nós</h1>
-                <p>Fanzilla é uma plataforma inovadora dedicada a conectar amantes de filmes e séries. Nossa missão é
-                    proporcionar uma experiência única, onde os usuários podem explorar, descobrir e compartilhar suas
-                    paixões cinematográficas.</p>
-                <p>Com um catálogo diversificado e atualizado, oferecemos uma ampla gama de opções para todos os gostos. Desde
-                    clássicos atemporais até os lançamentos mais recentes, garantimos que você sempre encontre algo
-                    emocionante para assistir.</p>
-                <p>Nossa comunidade é o coração da Fanzilla. Incentivamos a interação entre os usuários, permitindo que
-                    compartilhem opiniões, críticas e recomendações. Junte-se a nós e faça parte dessa jornada cinematográfica
-                    incrível!</p>
+    <main>
+        <section id="apresentacao" class="section-container apresentacao-pessoal">
+            <h2 class="section-title">Minha Apresentação</h2>
+            <hr class="section-divider">
+
+            <div class="apresentacao-conteudo">
+                <div class="imagem-perfil">
+                    <img src="/forms/public/img/imgsobre/imgsobre.jpeg" alt="Minha Foto de Perfil">
+                </div>
+                <div class="texto-apresentacao">
+                    <p>Oi! Eu sou o Gustavo Sousa e este é o meu cantinho na internet.</p>
+                    <p>Gosto muito de programação, amo ler e vivo fuçando coisas novas sobre tecnologia e o universo.
+                        Usei este
+                        espaço para mostrar um pouco de quem eu sou e do que curto fazer.</p>
+                    <p>Fica à vontade para dar uma olhada nas minhas curiosidades</p>
+
+                    <div class="assinatura">
+                        <p>Atenciosamente,</p>
+                        <p class="nome-assinatura">Gustavo</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="criador">
-            <img src="foto.png" alt="">
-            <div class="sobre-texto">
-                <h1>Sobre o Criador</h1>
-                <p>O criador da Fanzilla é um apaixonado por c tecnologia. Desde jovem, sempre sonhou em Ser Rico!! 
-                    Ser Dono De Um Site...</p>
-                <p>Com uma formação sólida em desenvolvimento de software e design de experiência do usuário, ele dedicou
-                    anos de trabalho árduo para transformar essa visão em realidade.Para Estudar Na Germinare esse é o resultado desse sonho,Fanzilla
-                    projetada para ser intuitiva, envolvente e acessível a todos Com Milhares De Conteudos Até Adultos....</p>
-                <p>Além de ser um entusiasta do cinema, o criador também valoriza a comunidade. Ele acredita que a troca de
-                    experiências e opiniões enriquece a experiência cinematográfica e torna a Fanzilla um lugar especial para
-                    todos os amantes da sétima arte. e Sim Esse Texto eh em Terceira Pessoa!</p>
+        </section>
+
+        <section id="curiosidades" class="section-container curiosidades-pessoais">
+            <h2 class="section-title">Curiosidades sobre Mim</h2>
+            <hr class="section-divider">
+
+            <div class="curiosidades-layout-content">
+                <div class="curiosidades-conteudo">
+                    <ol id="lista-curiosidades-hover" class="lista-curiosidades">
+                        <li data-index="0">A primeira linguagem que aprendi foi C, e não Python ou JavaScript.</li>
+                        <li data-index="1">Tenho uma coleção de Manhwas itens relacionados a Livros.</li>
+                        <li data-index="2">Meu recorde pessoal de leitura é de 5 livros em um mês.</li>
+                        <li data-index="3">Antes de me dedicar a programação, eu sonhava/ainda sonho em ser um
+                            Astronauta(um dia).</li>
+                        <li data-index="4">Apesar da minha paixão por tecnologia, sou totalmente avesso a Assembly.</li>
+                    </ol>
+                </div>
+
+                <div class="carrosel-img">
+                    <img class="carousel-image active" src="/forms/public/img/imgsobre/C.png" alt="Imagem 1 - C">
+                    <img class="carousel-image" src="/forms/public/img/imgsobre/manhwas.jpg" alt="Imagem 2 - Manhwas">
+                    <img class="carousel-image" src="/forms/public/img/imgsobre/livros.webp" alt="Imagem 3 - Livros">
+                    <img class="carousel-image" src="/forms/public/img/imgsobre/astronauta.jpeg"
+                        alt="Imagem 4 - Astronauta">
+                    <img class="carousel-image" src="/forms/public/img/imgsobre/assembly.jpeg"
+                        alt="Imagem 5 - Assembly">
+                </div>
             </div>
-        </div>
-    </div>    
+        </section>
+
+        <section id="lugares" class="section-container lugares-viagens">
+            <h2 class="section-title">Lugares e Viagens</h2>
+            <hr class="section-divider">
+
+            <div class="lugares-conteudo">
+
+                <div class="lugares-conhecidos">
+                    <h3>Lugares que Já Visitei 🌎</h3>
+                    <ul class="lista-nao-ordenada">
+                        <li><a id="link-nova-york" href="https://pt.wikipedia.org/wiki/Nova_York" target="_blank">Nova
+                                York</a> (EUA)</li>
+                        <li><a id="link-rio-janeiro" href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro"
+                                target="_blank">Rio de Janeiro</a> (Brasil)</li>
+                        <li><a id="link-lisboa" href="https://pt.wikipedia.org/wiki/Lisboa" target="_blank">Lisboa</a>
+                            (Portugal)</li>
+                        <li><a id="link-buenos-aires" href="https://pt.wikipedia.org/wiki/Buenos_Aires"
+                                target="_blank">Buenos Aires</a> (Argentina)</li>
+                    </ul>
+                </div>
+
+                <div class="foto">
+                    <h3 class="section-title">VIAGENS</h3>
+                    <img id="foto-viagem" src="/forms/public/img/imgsobre/planeta.avif" alt="Imagem Padrão de Viagens">
+                </div>
+
+                <div class="lugares-desejados">
+                    <h3>Lugares que Quero Conhecer ✨</h3>
+                    <ol class="lista-ordenada-alfabetica">
+                        <li><a id="link-copenhague" href="https://pt.wikipedia.org/wiki/Copenhague"
+                                target="_blank">Copenhague</a> (Dinamarca)</li>
+                        <li><a id="link-kyoto" href="https://pt.wikipedia.org/wiki/Kioto" target="_blank">Kyoto</a>
+                            (Japão)</li>
+                        <li><a id="link-reykjavik" href="https://pt.wikipedia.org/wiki/Reykjavik"
+                                target="_blank">Reykjavik</a> (Islândia)</li>
+                        <li><a id="link-toronto" href="https://pt.wikipedia.org/wiki/Toronto"
+                                target="_blank">Toronto</a> (Canadá)</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
     <footer class="footer">
         <div id="footer-content">
             <div class="footer-social-media">
                 <h1>Siga-Nos Nas Redes-Sociais</h1>
                 <div class="link-footer">
                     <a href="#"><img style="border-radius: 10px;" width="50px" height="50px"
-                            src="img/LogosRedesSociais/LogoFacebook.png" alt="Facebook"></a>
-                    <a href="#"><img width="50px" height="50px" src="img/LogosRedesSociais/LogoInstagram.webp"
-                            alt="Instagram"></a>
-                    <a href="#"><img width="50px" height="50px" src="img/LogosRedesSociais/LogoWhatsApp.webp"
-                            alt="WhatsApp"></a>
+                            src="/forms/public/img/LogosRedesSociais/LogoFacebook.png" alt="Facebook"></a>
+                    <a href="#"><img width="50px" height="50px"
+                            src="/forms/public/img/LogosRedesSociais/LogoInstagram.webp" alt="Instagram"></a>
+                    <a href="#"><img width="50px" height="50px"
+                            src="/forms/public/img/LogosRedesSociais/LogoWhatsApp.webp" alt="WhatsApp"></a>
                 </div>
             </div>
             <div class="footer-social-media">
-                <h1 style="margin-bottom: 30px;">Baixe o App</h1>
+                <h1>Baixe o App</h1>
                 <div class="link-footer">
-                    <img style="position: absolute;bottom: 340px;" width="80px" height="90px" src="img/FanzilaLogo.webp"
-                        alt="Google Play">
+                    <img width="80px" height="90px " src="/forms/public/img/FanzilaLogo.webp" alt="Google Play">
                 </div>
             </div>
-        </div>
         </div>
         <div class="PoliticaeTermos">
             <a href="">Política de Privacidade</a>
@@ -104,7 +173,9 @@
             el.textContent = `Olá, ${nomeUsuario}!`;
         }
     </script>
+    <script src="/forms/public/src/menu.js"></script>
+    <script src="/forms/public/src/scriptSobre.js"></script>
+    <script src="/forms/public/src/carroselSobre.js"></script>
 </body>
-<script src="src/menu.js"></script>
 
 </html>
