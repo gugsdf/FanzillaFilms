@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Mapeamento das IDs dos links para os caminhos das imagens
     //    *** SUBSTITUA AQUI PELOS SEUS CAMINHOS DE IMAGEM ***
     const imageMap = {
-        'link-nova-york': '/forms/public/img/imgsobre/EUA.avif',
-        'link-rio-janeiro': '/forms/public/img/imgsobre/cristo.jpg',
-        'link-lisboa': '/forms/public/img/imgsobre/lisboa.jpg',
-        'link-buenos-aires': '/forms/public/img/imgsobre/buenos.jpg',
-        'link-copenhague': '/forms/public/img/imgsobre/copenhague.jpg',
-        'link-kyoto': '/forms/public/img/imgsobre/kyoto.jpg',
-        'link-reykjavik': '/forms/public/img/imgsobre/reykjavik.avif',
-        'link-toronto': '/forms/public/img/imgsobre/toronto.jpg'
+        'link-nova-york': '/img/imgsobre/EUA.avif',
+        'link-rio-janeiro': '/img/imgsobre/cristo.jpg',
+        'link-lisboa': '/img/imgsobre/lisboa.jpg',
+        'link-buenos-aires': '/img/imgsobre/buenos.jpg',
+        'link-copenhague': '/img/imgsobre/copenhague.jpg',
+        'link-kyoto': '/img/imgsobre/kyoto.jpg',
+        'link-reykjavik': '/img/imgsobre/reykjavik.avif',
+        'link-toronto': '/img/imgsobre/toronto.jpg'
     };
     
     // 2. Elementos principais
